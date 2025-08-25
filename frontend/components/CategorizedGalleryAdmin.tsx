@@ -709,8 +709,8 @@ const CategorizedGalleryAdmin: React.FC = () => {
                             src={item.url}
                             alt={item.name}
                             fill
+                            sizes="200px"
                             className="object-cover rounded"
-                            unoptimized
                           />
                         </div>
                       ) : (

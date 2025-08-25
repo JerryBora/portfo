@@ -439,12 +439,9 @@ const CategorizedGallerySection: React.FC = () => {
                       <Image
                         src={item.url}
                         alt={item.name || 'Gallery image'}
-                        layout="responsive"
-                        width={item.width || 700}
-                        height={item.height || 500}
-                        objectFit="contain"
-                        className="transition-transform duration-500 ease-in-out group-hover:scale-105 w-full h-full"
-                        unoptimized
+                        width={(item.width || 700) * 0.7}
+                        height={(item.height || 500) * 0.7}
+                        className="transition-transform duration-500 ease-in-out group-hover:scale-105 w-full h-full object-contain"
                       />
                     )}
                     
@@ -523,9 +520,7 @@ const CategorizedGallerySection: React.FC = () => {
                   alt={selectedMedia.name || 'Enlarged gallery image'}
                   width={selectedMedia.width || 1200}
                   height={selectedMedia.height || 900}
-                  objectFit="contain"
                   className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
-                  unoptimized
                 />
               )}
             </div>
